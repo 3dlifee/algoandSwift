@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		F3B9186B260A5C5600474D6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9186A260A5C5600474D6C /* ContentView.swift */; };
 		F3B9186D260A5C5800474D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B9186C260A5C5800474D6C /* Assets.xcassets */; };
 		F3B91870260A5C5800474D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B9186F260A5C5800474D6C /* Preview Assets.xcassets */; };
+		F3B9187A260A5CCA00474D6C /* swift-algorand-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = F3B91879260A5CCA00474D6C /* swift-algorand-sdk */; };
+		F3B9187D260A5CFC00474D6C /* fuelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9187C260A5CFC00474D6C /* fuelService.swift */; };
+		F3B91880260A5D0D00474D6C /* transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9187F260A5D0D00474D6C /* transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		F3B9186C260A5C5800474D6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B9186F260A5C5800474D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3B91871260A5C5800474D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3B9187C260A5CFC00474D6C /* fuelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fuelService.swift; sourceTree = "<group>"; };
+		F3B9187F260A5D0D00474D6C /* transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B9187A260A5CCA00474D6C /* swift-algorand-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,8 @@
 			children = (
 				F3B91868260A5C5600474D6C /* algoandSwiftApp.swift */,
 				F3B9186A260A5C5600474D6C /* ContentView.swift */,
+				F3B9187C260A5CFC00474D6C /* fuelService.swift */,
+				F3B9187F260A5D0D00474D6C /* transaction.swift */,
 				F3B9186C260A5C5800474D6C /* Assets.xcassets */,
 				F3B91871260A5C5800474D6C /* Info.plist */,
 				F3B9186E260A5C5800474D6C /* Preview Content */,
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = algoandSwift;
+			packageProductDependencies = (
+				F3B91879260A5CCA00474D6C /* swift-algorand-sdk */,
+			);
 			productName = algoandSwift;
 			productReference = F3B91865260A5C5600474D6C /* algoandSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +123,9 @@
 				Base,
 			);
 			mainGroup = F3B9185C260A5C5600474D6C;
+			packageReferences = (
+				F3B91878260A5CCA00474D6C /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */,
+			);
 			productRefGroup = F3B91866260A5C5600474D6C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3B9186B260A5C5600474D6C /* ContentView.swift in Sources */,
+				F3B9187D260A5CFC00474D6C /* fuelService.swift in Sources */,
+				F3B91880260A5D0D00474D6C /* transaction.swift in Sources */,
 				F3B91869260A5C5600474D6C /* algoandSwiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +344,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3B91878260A5CCA00474D6C /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jesulonimi21/Swift-Algorand-Sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3B91879260A5CCA00474D6C /* swift-algorand-sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3B91878260A5CCA00474D6C /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */;
+			productName = "swift-algorand-sdk";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3B9185D260A5C5600474D6C /* Project object */;
 }

@@ -11,7 +11,15 @@ import SwiftUI
 struct algoandSwiftApp: App {
     var body: some Scene {
         WindowGroup {
+            VStack{
+                
+          
             ContentView()
+                
+                
+            }
+            
+            .background((Color("backG")))
         }
     }
 }
