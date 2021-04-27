@@ -83,15 +83,15 @@ struct fuelService: View {
                 }
                 
                 
-                let tx = Transaction.paymentTransactionBuilder().setSender(senderAddress)
-                    .amount(10)
+                let tx = try? Transaction.paymentTransactionBuilder().setSender(senderAddress)
+                    .amount(1)
                     .receiver(receiverAddress)
                     .note("Swift Algo sdk is cool".bytes)
                     .suggestedParams(params: paramResponse.data!)
                     .build()
                 
                 
-                let signedTransaction=account.signTransaction(tx: tx)
+                let signedTransaction=account.signTransaction(tx: tx!)
                 
                 let encodedTrans:[Int8]=CustomEncoder.encodeToMsgPack(signedTransaction)
                 
