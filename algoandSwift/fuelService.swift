@@ -72,7 +72,6 @@ struct fuelService: View {
             let senderAddress = account.getAddress()
             let receiverAddress = try! Address("K--------------------------")
             
-            
           
             
             algodClient.transactionParams().execute(){ paramResponse in
@@ -84,7 +83,7 @@ struct fuelService: View {
                 
                 
                 let tx = try? Transaction.paymentTransactionBuilder().setSender(senderAddress)
-                    .amount(1)
+                    .amount(1000000)
                     .receiver(receiverAddress)
                     .note("Swift Algo sdk is cool".bytes)
                     .suggestedParams(params: paramResponse.data!)
